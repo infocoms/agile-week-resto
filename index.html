@@ -13,22 +13,28 @@
 
 <div class="container container-fluid p-4 mt-2">
 
-    <div class="form-row mb-3">
-        <div class="col-4">
-            <input type="text" id="input" class="rounded-pill form-control">
-        </div>
-        <div class="col-1">
-            <div class="btn btn-primary rounded-pill" id="run">Run</div>
-        </div>
+<form>
+    <div class="form-group">
+        <input type="text" id="input" class="form-control-lg">
+        <label for="select">Type:</label>
+        <select class="form-control-lg" id="select">
+            <option value="1">Café</option>
+            <option value="18">Fine Dining</option>
+            <option value="16">Casual Dining</option>
+            <option value="31">Bakery</option>
+        </select>
+        <div class="btn btn-primary" id="run">Run</div>
     </div>
-</div>
+</form>
 
 <div id="coords"></div>
 <div id="cityName"></div>
 <div id="foodplaces"></div>
 
+</div>
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="assets/js/geolocator.js"></script>
+<!-- <script src="assets/js/geolocator.js"></script> -->
 <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 function fetcher() {
     let cityName = document.getElementById("input").value;
+    let selected = document.getElementById("select").value;
     fetch("https://developers.zomato.com/api/v2.1/cities?q=" + cityName, {
         headers: {
             "User-Key": "56c93a06a8b5ce046c8aa947fe8e78a1"
@@ -10,7 +11,7 @@ function fetcher() {
         console.log(city);
         let cityID = city.location_suggestions[0].id;
 
-        fetch("https://developers.zomato.com/api/v2.1/search?entity_type=city&count=1000&entity_id=" + cityID, {
+        fetch("https://developers.zomato.com/api/v2.1/search?entity_type=city&sort=rating&establishment_type=" + selected + "&entity_id=" + cityID, {
             headers: {
                 "User-Key": "56c93a06a8b5ce046c8aa947fe8e78a1"
             }
