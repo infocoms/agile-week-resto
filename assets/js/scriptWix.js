@@ -1,6 +1,3 @@
-var userInput = document.getElementById("input").value;
-
-var coords = document.getElementById("coords");
 
 var positionArray = [];
 navigator.geolocation.getCurrentPosition(function (position) {
