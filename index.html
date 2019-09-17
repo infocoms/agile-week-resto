@@ -9,9 +9,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Find your Restaurant</title>
     <link rel="icon" type="image/png" href="1.png"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -20,33 +18,34 @@
 <div id="background"></div>
 <div id="background-filter"></div>
 
-<div class="container container-fluid p-4 mt-2">
+<div class="container p-4 text-center w-50">
     <form>
-        <div class="form-group">
-            <input type="text" id="input" class="form-control-lg">
-            <label for="select">Type:</label>
-            <select class="form-control-lg" id="select">
-                <option value="1">Café</option>
-                <option value="18">Fine Dining</option>
-                <option value="16">Casual Dining</option>
-                <option value="31">Bakery</option>
-            </select>
-            <div class="btn btn-primary" id="run">Run</div>
+        <div class="form-group form-row border border-light">
+            <div class="col-3 ml-auto border border-light">
+                <input type="text" id="input" class="form-control form-control-lg">
+            </div>
+            <div class="col-2 border border-light">
+                <select class="form-control form-control-lg" id="select">
+                    <option value="1">Café</option>
+                    <option value="18">Fine Dining</option>
+                    <option value="16">Casual Dining</option>
+                    <option value="31">Bakery</option>
+                </select>
+            </div>
+            <div class="btn btn-secondary mr-auto" id="run">Search</div>
         </div>
     </form>
 
     <div id="target"></div>
 
-
     <div id="coords"></div>
     <div id="cityName"></div>
     <div id="foodplaces"></div>
-
 </div>
 
 <template id="temp">
-    <div class="border border-dark mb-2">
-        <div class="name"></div>
+    <div class="border border-light mb-2 text-light p-3 temp-card">
+        <h2 class="name"></h2>
         <div class="rating"></div>
         <div class="location"></div>
         <div class="phone"></div>
