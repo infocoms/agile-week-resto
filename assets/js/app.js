@@ -19,6 +19,28 @@ function fetcher() {
             return response.json();
         }).then(function (data) {
             console.log(data);
+
+            let target = document.getElementById("target");
+            target.innerHTML = "";
+
+            for (i = 0; i < 5; i++){
+                let temp = document.getElementById("temp");
+                let name = temp.content.querySelector(".name");
+                let rating = temp.content.querySelector(".rating");
+                let location = temp.content.querySelector(".location");
+                let phone = temp.content.querySelector(".phone");
+                let timings = temp.content.querySelector(".timings");
+
+                name.innerText = data.restaurants[i].restaurant.name;
+                rating.innerText = data.restaurants[i].restaurant.user_rating.aggregate_rating;
+
+                let clone = temp.content.cloneNode(true);
+                target.appendChild(clone);
+            }
+
+
+
+
         })
     })
 }
