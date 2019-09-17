@@ -33,6 +33,9 @@ function fetcher() {
 
                 name.innerText = data.restaurants[i].restaurant.name;
                 rating.innerText = data.restaurants[i].restaurant.user_rating.aggregate_rating;
+                location.innerText = data.restaurants[i].restaurant.location.locality_verbose;
+                phone.innerText = data.restaurants[i].restaurant.phone_numbers;
+                timings.innerText = data.restaurants[i].restaurant.timings;
 
                 let clone = temp.content.cloneNode(true);
                 target.appendChild(clone);
