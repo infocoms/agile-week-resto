@@ -41,6 +41,20 @@ function fetcher() {
                 target.appendChild(clone);
             }
 
+            fetch("https://api.unsplash.com/search/photos/?client_id=e74ca46b22fd8cbf5fbb5c231739839cb4730ae959f74a65d24583789012d6c3&page=1&query=" + data.restaurants[2].restaurant.location.city)
+                .then(function (response) {
+                    return response.json()
+                }).then(function (pictures) {
+                console.log(pictures);
+
+                let random = Math.floor(Math.random() * pictures.results.length);
+                console.log(random);
+
+                target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat center center fixed";
+                //target.style.backgroundSize = "cover";
+                target.style.border = "1px solid white";
+            })
+
         })
     })
 }
