@@ -12,58 +12,42 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148172371-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-148172371-1', { 'optimize_id': 'GTM-P9D7FBG'});
-    </script>
-
-    <!-- Anti-flicker snippet (recommended)  -->
-    <style>.async-hide { opacity: 0 !important} </style>
-    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-        h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-    })(window,document.documentElement,'async-hide','dataLayer',4000,
-        {'GTM-P9D7FBG':true});</script>
-
 </head>
 <body>
 
-<div class="container">
-    <div class="row">
-        <picture>
-            <img src="" alt="">
-        </picture>
-    </div>
-</div>
+<div class="container p-4 text-center mt-5">
 
-<div class="container p-4 text-center mt-5 w-50">
-    <form>
-        <div class="form-group form-row">
-            <div class="col-5 ml-auto">
-                <input type="text" id="input" class="form-control form-control-lg" placeholder="City, but not in Belgium">
+    <div class="row">
+        <div class="col mx-auto">
+            <div id="bigLogo" class="mx-auto">
             </div>
-            <div class="col-4">
-                <select class="form-control form-control-lg" id="select">
-                    <option value="275">Pizzeria</option>
-                    <option value="101">Diner</option>
-                    <option value="271">Sandwich Shop</option>
-                    <option value="18">Fine Dining</option>
-                    <option value="16">Casual Dining</option>
-                    <option value="281">Fast Food</option>
-                    <option value="91">Bistro</option>
-                    <option value="1">Café</option>
-                </select>
-            </div>
-            <div class="btn btn-secondary mr-auto ml-2" id="run">Search</div>
         </div>
-    </form>
-    <div id="target" class="p-3"></div>
+
+        <div class="container p-4 text-center mt-5">
+            <form>
+                <div class="form-group form-row mx-auto">
+                    <div class="col-5 ml-auto">
+                        <input type="text" id="input" class="form-control form-control-lg"
+                               placeholder="City, but not in Belgium" required>
+                    </div>
+                    <div class="col-4">
+                        <select class="form-control form-control-lg" id="select">
+                            <option value="275">Pizzeria</option>
+                            <option value="101">Diner</option>
+                            <option value="271">Sandwich Shop</option>
+                            <option value="18">Fine Dining</option>
+                            <option value="16">Casual Dining</option>
+                            <option value="281">Fast Food</option>
+                            <option value="91">Bistro</option>
+                            <option value="1">Café</option>
+                        </select>
+                    </div>
+                    <div class="btn btn-danger mr-auto ml-2" id="run">Find Food!</div>
+                </div>
+            </form>
+            <div id="target" class="p-3"></div>
+        </div>
+    </div>
 </div>
 
 <template id="temp">
@@ -96,6 +80,7 @@
                 <div class="coin3"></div>
                 <div class="coin4"></div>
             </div>
+            <div class="col delivers"></div>
         </div>
     </div>
 </template>
@@ -106,7 +91,8 @@
             <div class="row">
                 <div class="col-lg-5 col-xs-12 about-company">
                     <h2>FoodieFinder</h2>
-                    <p class="pr-5 text-white-50">FoodieFinder is a company specialized in finding the best restaurants
+                    <p class="pr-5 text-white-50">FoodieFinder is a company specialized in finding the best
+                        restaurants
                         or cafes from your location. </p>
                     <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i
                             class="fa fa-linkedin-square"></i></a></p>
@@ -121,7 +107,7 @@
                 </div>
                 <div class="col-lg-4 col-xs-12 location">
                     <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-                    <p>  Tolhuis, Sint-Pietersvliet 7, 2000 Antwerpen</p>
+                    <p> Tolhuis, Sint-Pietersvliet 7, 2000 Antwerpen</p>
                     <p class="mb-0">
                         <i class="fa fa-phone mr-3"></i>0487 44 80 49</p>
                     <p><i class="fa fa-envelope-o mr-3"></i>foodiefinds19@gmail.com</p>
