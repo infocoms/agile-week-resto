@@ -23,7 +23,6 @@
         gtag('config', 'UA-148172371-1', { 'optimize_id': 'GTM-P9D7FBG'});
     </script>
 
-
     <!-- Anti-flicker snippet (recommended)  -->
     <style>.async-hide { opacity: 0 !important} </style>
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
@@ -67,8 +66,34 @@
     <div id="target" class="p-3"></div>
 </div>
 
+<template id="temp">
+    <div class="border border-light mb-5 text-light p-3 temp-card">
+        <div class="row text-center text-center">
+            <div class="col">
+                <h3 class="name"></h3>
+            </div>
+            <div class="col">
+                <div class="rating"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="location"></div>
+            </div>
+            <div class="col">
+                <div class="phone"></div>
+            </div>
+        </div>
+        <div class="row mt-3 text-center">
+            <div class="col">
+                <p class="timings"></p>
+            </div>
+        </div>
+    </div>
+</template>
+
 <footer class="page-footer text-white">
-    <div class="pt-4 footer">
+    <div class="pt-4 footer margin" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-xs-12 about-company">
@@ -101,32 +126,6 @@
         </div>
     </div>
 </footer>
-
-<template id="temp">
-    <div class="border border-light mb-5 text-light p-3 temp-card">
-        <div class="row text-center text-center">
-            <div class="col">
-                <h3 class="name"></h3>
-            </div>
-            <div class="col">
-                <div class="rating"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="location"></div>
-            </div>
-            <div class="col">
-                <div class="phone"></div>
-            </div>
-        </div>
-        <div class="row mt-3 text-center">
-            <div class="col">
-                <p class="timings"></p>
-            </div>
-        </div>
-    </div>
-</template>
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="assets/js/geolocator.js"></script>

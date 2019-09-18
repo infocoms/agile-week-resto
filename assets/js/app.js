@@ -23,7 +23,7 @@ function fetcher() {
             let target = document.getElementById("target");
             target.innerHTML = "";
 
-            for (i = 0; i < 5; i++){
+            for (i = 0; i < 5; i++) {
                 let temp = document.getElementById("temp");
                 let name = temp.content.querySelector(".name");
                 let rating = temp.content.querySelector(".rating");
@@ -53,7 +53,10 @@ function fetcher() {
                 target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat center center fixed";
                 //target.style.backgroundSize = "cover";
                 target.style.border = "1px solid white";
-            })
+            });
+
+            let footer = document.getElementById("footer")
+            footer.classList.remove("margin");
 
         })
     })
@@ -61,4 +64,5 @@ function fetcher() {
 
 document.getElementById("run").addEventListener("click", function () {
     fetcher();
+
 });

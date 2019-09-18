@@ -57,8 +57,10 @@ option {
 .footer{
     background: rgba(21, 47, 79, 0.6);
     width: 100%;
-    position: absolute;
-    top: 100vh;
+}
+
+.margin{
+    margin-top: 100vh;
 }
 
 a{
