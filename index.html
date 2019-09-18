@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148172371-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148172371-1');
+    </script>
+
+
 </head>
 <body>
 
@@ -27,24 +38,28 @@
     <form>
         <div class="form-group form-row">
             <div class="col-5 ml-auto">
-                <input type="text" id="input" class="form-control form-control-lg" placeholder="City, but not Belgium">
+                <input type="text" id="input" class="form-control form-control-lg" placeholder="City, but not in Belgium">
             </div>
             <div class="col-4">
                 <select class="form-control form-control-lg" id="select">
-                    <option value="1">Café</option>
+                    <option value="275">Pizzeria</option>
+                    <option value="101">Diner</option>
+                    <option value="271">Sandwich Shop</option>
                     <option value="18">Fine Dining</option>
                     <option value="16">Casual Dining</option>
-                    <option value="31">Bakery</option>
+                    <option value="281">Fast Food</option>
+                    <option value="91">Bistro</option>
+                    <option value="1">Café</option>
                 </select>
             </div>
             <div class="btn btn-secondary mr-auto ml-2" id="run">Search</div>
         </div>
     </form>
-    <div id="target"></div>
+    <div id="target" class="p-3"></div>
 </div>
 
 <template id="temp">
-    <div class="border border-light mb-2 text-light p-3 temp-card">
+    <div class="border border-light mb-5 text-light p-3 temp-card">
         <div class="row text-center text-center">
             <div class="col">
                 <h3 class="name"></h3>
