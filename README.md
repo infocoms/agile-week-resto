@@ -1,9 +1,11 @@
 # JS-agile-week
-# About Foodie Finder
-![](src/fodiefinder.png)
-Foodie Finder : is a very useful web page that returns the best restaurants in a city of your choice, respecting one of the restaurants catagories in the dropdown menue.
 
-## why Foodie Finder ?
+![](src/fodiefinder.png)
+
+# About FoodieFinder
+ is a very useful web page that returns the best restaurants in a city of your choice, respecting one of the restaurants catagories in the dropdown menue.
+
+## Idea
 We are a foodie team we love food. one day we were thinking of  going out to eat, it's for sure you can search for that information on google but what if you want to be fast and specifick in one kind of food. With this website you will for sure not lose that much of time.
 
 ## Contact us FoodieFinder 
