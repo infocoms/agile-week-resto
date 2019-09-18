@@ -22,6 +22,11 @@ option{
     font-size: 150%;
 }
 
+#target{
+    object-fit: cover;
+    background-size: cover;
+}
+
 /* Template Styling */
 .name{
     font-weight: bold;
@@ -46,7 +51,7 @@ option{
 }
 
 .temp-card{
-    background-color: rgba(0,0,0, 0.4);
+    background-color: rgba(0,0,0, 0.8);
 }
 
 
