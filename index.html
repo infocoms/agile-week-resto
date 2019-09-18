@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Find your Restaurant</title>
+    <title>FoodieFinder</title>
     <link rel="icon" type="image/png" href="1.png"/>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,16 +15,21 @@
 </head>
 <body>
 
-<div id="background"></div>
-<div id="background-filter"></div>
+<div class="container">
+    <div class="row">
+        <picture>
+            <img src="" alt="">
+        </picture>
+    </div>
+</div>
 
-<div class="container p-4 text-center w-50">
+<div class="container p-4 text-center w-50 mt-5">
     <form>
-        <div class="form-group form-row border border-light">
-            <div class="col-3 ml-auto border border-light">
-                <input type="text" id="input" class="form-control form-control-lg">
+        <div class="form-group form-row">
+            <div class="col-5 ml-auto">
+                <input type="text" id="input" class="form-control form-control-lg" placeholder="City, but not Belgium">
             </div>
-            <div class="col-2 border border-light">
+            <div class="col-4">
                 <select class="form-control form-control-lg" id="select">
                     <option value="1">Café</option>
                     <option value="18">Fine Dining</option>
@@ -32,24 +37,35 @@
                     <option value="31">Bakery</option>
                 </select>
             </div>
-            <div class="btn btn-secondary mr-auto" id="run">Search</div>
+            <div class="btn btn-secondary mr-auto ml-2" id="run">Search</div>
         </div>
     </form>
-
     <div id="target"></div>
-
-    <div id="coords"></div>
-    <div id="cityName"></div>
-    <div id="foodplaces"></div>
 </div>
 
 <template id="temp">
     <div class="border border-light mb-2 text-light p-3 temp-card">
-        <h2 class="name"></h2>
-        <div class="rating"></div>
-        <div class="location"></div>
-        <div class="phone"></div>
-        <div class="timings"></div>
+        <div class="row text-center text-center">
+            <div class="col">
+                <h3 class="name"></h3>
+            </div>
+            <div class="col">
+                <div class="rating"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="location"></div>
+            </div>
+            <div class="col">
+                <div class="phone"></div>
+            </div>
+        </div>
+        <div class="row mt-3 text-center">
+            <div class="col">
+                <p class="timings"></p>
+            </div>
+        </div>
     </div>
 </template>
 
