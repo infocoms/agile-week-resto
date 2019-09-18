@@ -8,24 +8,8 @@
 body{
     background: black;
     font-family: 'Raleway', sans-serif;
-}
-
-#background{
-    position: fixed;
     background: url("../../src/rest.jpeg") center center no-repeat fixed;
     background-size: cover;
-    height: 100%;
-    width: 100%;
-    z-index: -10;
-}
-
-#background-filter{
-    background: black;
-    opacity: 0.8;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
 }
 
 option{
@@ -33,14 +17,36 @@ option{
     border-radius: 10px;
 }
 
+#run{
+    line-height: 35px;
+    font-size: 150%;
+}
+
+/* Template Styling */
 .name{
     font-weight: bold;
-    -webkit-text-stroke: 1px black;
+    /*-webkit-text-stroke: 1px black;*/
     letter-spacing: 1.6px;
 }
 
-.temp-card{
-    background-color: rgba(0,0,0, 0.7);
+.location{
+    font-style: italic;
+    font-weight: bold;
 }
 
-.
+.rating{
+    font-size: 200%;
+    font-weight: bold;
+    /*-webkit-text-stroke: 1px black;*/
+    letter-spacing: 1.6px;
+}
+
+.timings{
+    font-style: italic;
+}
+
+.temp-card{
+    background-color: rgba(0,0,0, 0.4);
+}
+
+

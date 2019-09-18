@@ -32,8 +32,8 @@ function fetcher() {
                 let timings = temp.content.querySelector(".timings");
 
                 name.innerText = data.restaurants[i].restaurant.name;
-                rating.innerText = data.restaurants[i].restaurant.user_rating.aggregate_rating;
-                location.innerText = data.restaurants[i].restaurant.location.locality_verbose;
+                rating.innerHTML = data.restaurants[i].restaurant.user_rating.aggregate_rating + "&#11088;";
+                location.innerText = data.restaurants[i].restaurant.location.address;
                 phone.innerText = data.restaurants[i].restaurant.phone_numbers;
                 timings.innerText = data.restaurants[i].restaurant.timings;
 
