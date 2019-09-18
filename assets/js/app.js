@@ -41,9 +41,6 @@ function fetcher() {
                 target.appendChild(clone);
             }
 
-
-
-
         })
     })
 }
