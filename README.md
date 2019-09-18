@@ -1,11 +1,10 @@
-# JS-agile-week
 
-## FoodieFinder
+# FoodieFinder
 
 ![](src/fodiefinder.png)
 
 
-# About 
+## About 
  is a very useful web page that returns the best restaurants in a city of your choice, respecting one of the restaurants catagories in the dropdown menue.
  
 
