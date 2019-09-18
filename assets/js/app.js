@@ -20,6 +20,10 @@ function fetcher() {
         }).then(function (data) {
             console.log(data);
 
+            for (i = 0; i < data.restaurants.length; i++) {
+                console.log(data.restaurants[i].restaurant.price_range);
+            }
+
             let target = document.getElementById("target");
             target.innerHTML = "";
 
@@ -30,12 +34,41 @@ function fetcher() {
                 let location = temp.content.querySelector(".location");
                 let phone = temp.content.querySelector(".phone");
                 let timings = temp.content.querySelector(".timings");
+                let coin1 = temp.content.querySelector(".coin1");
+                let coin2 = temp.content.querySelector(".coin2");
+                let coin3 = temp.content.querySelector(".coin3");
+                let coin4 = temp.content.querySelector(".coin4");
 
                 name.innerText = data.restaurants[i].restaurant.name;
                 rating.innerHTML = data.restaurants[i].restaurant.user_rating.aggregate_rating + "&#11088;";
                 location.innerText = data.restaurants[i].restaurant.location.address;
-                phone.innerText = data.restaurants[i].restaurant.phone_numbers;
+                phone.innerHTML = "&#9743;" + data.restaurants[i].restaurant.phone_numbers;
                 timings.innerText = data.restaurants[i].restaurant.timings;
+
+                coin1.style.background = "url('src/coin.svg')";
+                coin2.style.background = "url('src/coin.svg')";
+                coin3.style.background = "url('src/coin.svg')";
+                coin4.style.background = "url('src/coin.svg')";
+
+                coin1.style.opacity = "1";
+                coin2.style.opacity = "1";
+                coin3.style.opacity = "1";
+                coin4.style.opacity = "1";
+
+                switch (data.restaurants[i].restaurant.price_range) {
+
+                    case 1:
+                        coin4.style.opacity = "0.3";
+                        coin3.style.opacity = "0.3";
+                        coin2.style.opacity = "0.3";
+                        break;
+                    case 2:
+                        coin4.style.opacity = "0.3";
+                        coin3.style.opacity = "0.3";
+                        break;
+                    case 3:
+                        coin4.style.opacity = "0.3";
+                }
 
                 let clone = temp.content.cloneNode(true);
                 target.appendChild(clone);
@@ -46,16 +79,12 @@ function fetcher() {
                     return response.json()
                 }).then(function (pictures) {
                 console.log(pictures);
-
                 let random = Math.floor(Math.random() * pictures.results.length);
-                console.log(random);
-
                 target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat center center fixed";
-                //target.style.backgroundSize = "cover";
                 target.style.border = "1px solid white";
             });
 
-            let footer = document.getElementById("footer")
+            let footer = document.getElementById("footer");
             footer.classList.remove("margin");
 
         })
