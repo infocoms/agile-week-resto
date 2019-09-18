@@ -17,6 +17,14 @@ option {
     border-radius: 10px;
 }
 
+#bigLogo{
+    background: url("../../src/LOGO2.svg") no-repeat center center;
+    background-size: 100%;
+    border: 1px solid red;
+    width: 40vw;
+    height: 200px;
+}
+
 #run {
     line-height: 35px;
     font-size: 150%;
