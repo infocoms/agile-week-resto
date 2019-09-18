@@ -47,10 +47,10 @@ function showCity (){
 }
 
 
-function showLocalRestaurants (_ResturantsIDs) {
+function showLocalRestaurants (_RestaurantsIDs) {
     let dataRest = [];
     for (let i = 0; i < 5; i++) {
-        axios.get("https://developers.zomato.com/api/v2.1/restaurant?res_id=" + _ResturantsIDs[i], {
+        axios.get("https://developers.zomato.com/api/v2.1/restaurant?res_id=" + _RestaurantsIDs[i], {
             headers: {
                 "User-Key": "9729313939c69dfb4b25595b2cab0e89"
             }
