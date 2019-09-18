@@ -17,36 +17,52 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148172371-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
-        gtag('config', 'UA-148172371-1', { 'optimize_id': 'GTM-P9D7FBG'});
+        gtag('config', 'UA-148172371-1', {'optimize_id': 'GTM-P9D7FBG'});
     </script>
 
     <!-- Anti-flicker snippet (recommended)  -->
-    <style>.async-hide { opacity: 0 !important} </style>
-    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-        h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-    })(window,document.documentElement,'async-hide','dataLayer',4000,
-        {'GTM-P9D7FBG':true});</script>
+    <style>.async-hide {
+        opacity: 0 !important
+    } </style>
+    <script>(function (a, s, y, n, c, h, i, d, e) {
+        s.className += ' ' + y;
+        h.start = 1 * new Date;
+        h.end = i = function () {
+            s.className = s.className.replace(RegExp(' ?' + y), '')
+        };
+        (a[n] = a[n] || []).hide = h;
+        setTimeout(function () {
+            i();
+            h.end = null
+        }, c);
+        h.timeout = c;
+    })(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
+        {'GTM-P9D7FBG': true});</script>
 
 </head>
 <body>
 
-<div class="container">
-    <div class="row">
-        <picture>
-            <img src="" alt="">
-        </picture>
+<div class="container p-4 text-center mt-5 w-50">
+
+    <div class="row border border-light">
+        <div class="col mx-auto">
+            <div id="bigLogo" class="mx-auto">
+        </div>
     </div>
-</div>
 
 <div class="container p-4 text-center mt-5">
     <form>
         <div class="form-group form-row mx-auto">
             <div class="col-5 ml-auto">
-                <input type="text" id="input" class="form-control form-control-lg" placeholder="City, but not in Belgium" required>
+                <input type="text" id="input" class="form-control form-control-lg"
+                       placeholder="City, but not in Belgium" required>
             </div>
             <div class="col-4">
                 <select class="form-control form-control-lg" id="select">
@@ -60,7 +76,7 @@
                     <option value="1">Café</option>
                 </select>
             </div>
-            <div class="btn btn-secondary btn-md mr-auto" id="run">Search</div>
+            <div class="btn btn-danger mr-auto ml-2" id="run">Find Food!</div>
         </div>
     </form>
     <div id="target" class="p-3"></div>
@@ -96,6 +112,7 @@
                 <div class="coin3"></div>
                 <div class="coin4"></div>
             </div>
+            <div class="col delivers"></div>
         </div>
     </div>
 </template>
