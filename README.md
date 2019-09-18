@@ -19,7 +19,9 @@ Probably when we expand in our buisness we will be able to manage getting the ri
 
 
 ## Contact us FoodieFinder 
+
 Location : The Beacon, Sint-Pietersvliet 7, 2000 Antwerpen
+
 E-mail : foodiefinds19@gmail.com
 
 
@@ -28,5 +30,5 @@ we have manged to do the (A/B) test to run our project in order to  make the bes
 
 
 ## Our team : 
-#### Joseph Lindzius, Eloualid ghoulla, Jan Van Develde, Kevin Comyn, Rafah Alani 
+#### Joseph Lindzius, Eloualid ghoulla, Jan Van Develde, Kevin Comyn, Rafah Alani.
 ![](src/image.jpeg)
