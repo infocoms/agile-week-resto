@@ -20,3 +20,4 @@ we have manged to do the (A/B) test to run our project in order to  make the bes
 
 ## Our team : 
 #### Joseph Lindzius, Eloualid ghoulla, Jan Van Develde, Kevin Comyn, Rafah Alani 
+![](src/image.jpeg)
