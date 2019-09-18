@@ -30,6 +30,16 @@ i{font-size: 18px;}
 
 
 
+.teamPic{
+    margin-left: 6%;
+    margin-right: 6%;
+    height: 500px;
+    background-color: yellow;
+    background-image: url("../../src/group.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 

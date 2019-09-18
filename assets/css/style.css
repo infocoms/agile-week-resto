@@ -21,7 +21,7 @@ option {
     line-height: 35px;
 }
 
-#target{
+#target {
     object-fit: cover;
     background-size: cover;
 }
@@ -53,19 +53,34 @@ option {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.footer{
+/* /Template */
+
+.footer {
     background: rgba(21, 47, 79, 0.6);
     width: 100%;
 }
 
-.margin{
+.margin {
     margin-top: 100vh;
 }
 
-a{
+a {
     color: #D6924A;
 }
 
-a:hover{
+a:hover {
     color: white;
+}
+
+.coins {
+    height: 31px;
+    display: flex;
+}
+
+.coin1, .coin2, .coin3, .coin4 {
+    height: 30px;
+    width: 30px;
+    margin-right: 3px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
