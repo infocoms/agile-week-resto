@@ -42,6 +42,7 @@ function fetcher() {
                 let coin3 = temp.content.querySelector(".coin3");
                 let coin4 = temp.content.querySelector(".coin4");
                 let delivering = temp.content.querySelector(".delivers");
+                let photos = temp.content.querySelector(".photos");
                 let tagsPar = temp.content.querySelector(".tagsPar");
 
                 let tagsText = "";
@@ -66,6 +67,15 @@ function fetcher() {
                 tagsPar.innerText = tagsText;
 
                 name.innerText = data.restaurants[i].restaurant.name;
+
+
+                for (let j = 0; j < 5; j++) {
+                    photos.setAttribute("data-image"+j, data.restaurants[i].restaurant.photos[j].photo.url);
+                }
+
+
+
+
                 rating.innerHTML = data.restaurants[i].restaurant.user_rating.aggregate_rating + "&#11088;";
                 location.innerText = data.restaurants[i].restaurant.location.address;
                 phone.innerHTML = "&#9743;" + data.restaurants[i].restaurant.phone_numbers;
