@@ -6,23 +6,21 @@ body {
 }
 
 .teamPic{
-    margin-left: 2%;
-
-    background-color: yellow;
-    background-image: url("../../src/group.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 441px;
-    height: 340px;
-    float: left;
-    margin-right: 30px;
-
+    width: 100%;
 }
 
 .container{
     padding-bottom: 35px;
-    margin-top: 50px;
+    margin-top: 20px;
+    padding-right: 40px;
+}
+
+header {
+    height: 10vh;
+    background: rgba(21, 47, 79, 0.6);
+}
+h4 {
+    color: beige;
 }
 
 
