@@ -9,8 +9,12 @@ a {
     color: beige;
 }
 
+nav {
+    background: rgba(21, 47, 79, 0.6);
+}
+
 header {
-    height: 10vh;
+
     background: rgba(21, 47, 79, 0.6);
 }
 
