@@ -51,7 +51,7 @@
                             <button type="button" class="btn btn-danger wrn-btn" id="run">Search</button>
                         </div>
                         <div class="col-lg-2 col-md-3 col-sm-12 p-0">
-                            <button type="button" class="btn btn-warning wrn-btn rounded-right" id="find">Find me!</button>
+                            <button type="button" class="btn btn-warning wrn-btn rounded-right" id="geo">Find me!</button>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,8 @@
     </div>
 </section>
     <h2 id="targetText" class="text-white mt-2 text-center"></h2>
-    <div class="p-4 mt-4" id="target"></div>
+    <div class="card-deck text-center" id="target"></div>
+    <div class="p-4 mt-4" ></div>
 
 
 <-- orig template -->
@@ -118,11 +119,11 @@
 
     <-- alt template -->
     <template id="temp">
-    <div class="card mb-4 box-shadow">
-        <div class="card-header">
+    <div class="card mb-4 mt-4 box-shadow">
+        <div class="card-header text-center">
             <h4 class="my-0 font-weight-normal name">Free</h4>
         </div>
-        <img class="card-img-top photos grow" src="..." alt="Card image cap">
+        <img class="card-img-top photos" src="..." alt="Card image cap">
         <div class="card-body">
             <h1 class="card-title pricing-card-title rating">$0 <small class="text-muted">/ mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
@@ -139,6 +140,13 @@
                 <div class="coin3"></div>
                 <div class="coin4 mr-auto"></div>
             </div>
+            <div class="col-4">
+                <div class="tags p-2">
+                    <p class="tagsPar"></p>
+                </div>
+            </div>
+
+
         </div>
     </div>
     </template>
