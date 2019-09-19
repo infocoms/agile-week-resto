@@ -149,6 +149,11 @@ function fetcher() {
     })
 }
 
+function photoChanger () {
+    for (var i = 0; i < 5; i++) {
+
+    }
+}
 document.getElementById("run").addEventListener("click", function () {
     fetcher();
 });
