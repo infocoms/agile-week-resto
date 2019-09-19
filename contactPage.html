@@ -14,8 +14,10 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-
-<main class="container bg-light">
+<header class="header d-flex justify-content-center">
+    <img src="src/LOGO2.svg">
+</header>
+<main class="container bg-light mt-3">
     <section>
         <h1>Contact Us</h1>
         <h6>Have a question or a comment about our product?</h6><br>
@@ -32,21 +34,21 @@
         </div>
         <div class="col-xl-5 col-sm-12 d-flex justify-content-center">
             <form class="m-5" action="/action_page.php">
-                <label class="my-1 mx-auto" for="fname">First Name</label>
+                <label class="my-1 mx-auto pl-3" for="fname">Name</label>
                 <input class="m-2 form-control" type="text" id="fname" name="firstname" placeholder="Your name..">
-                <label class="my-1 mx-auto" for="lname">Last Name</label>
-                <input class="m-2 form-control" type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <label class="my-1 mx-auto" for="subject">Subject</label>
+                <label class="my-1 mx-auto pl-3">Email</label>
+                <input class="m-2 form-control" type="text" id="lname" name="lastname" placeholder="Your email address..">
+                <label class="my-1 mx-auto pl-3" for="subject">Subject</label>
                 <textarea rows="5" cols="30" class="m-2 form-control" id="subject" name="subject"
                           placeholder="Write your message here..."></textarea>
-                <input class="btn btn-primary" type="submit" value="Submit">
+                <input class="btn btn-primary mt-2 ml-3" type="submit" value="Submit">
             </form>
         </div>
     </div>
 </main>
 <br>
-<footer class="page-footer">
-    <div class="pt-4 pb-5 footer">
+<footer class="page-footer text-white">
+    <div class="pt-4 footer margin" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-xs-12 about-company">
@@ -59,19 +61,21 @@
                 <div class="col-lg-3 col-xs-12 links">
                     <h4 class="mt-lg-0 mt-sm-3">Links</h4>
                     <ul class="m-0 p-0">
-                        <li>- <a href="./template.eloualid/index.html">Home</a></li>
-                        <li>- <a href="./contactPage.html">Contact Us</a></li>
+                        <li>- <a href="./index.html">Home</a></li>
+                        <li>- <a href="./infoPage.html">About Us</a></li>
+                        <li>- <a href="./contactPage.html">Contact</a></li>
+                        <li>- <a href="./infoPage.html">About Us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-xs-12 location">
                     <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-                    <p>Tolhuis, Sint-Pietersvliet 7, 2000 Antwerpen</p>
+                    <p>  Tolhuis, Sint-Pietersvliet 7, 2000 Antwerpen</p>
                     <p class="mb-0">
                         <i class="fa fa-phone mr-3"></i>0487 44 80 49</p>
                     <p><i class="fa fa-envelope-o mr-3"></i>foodiefinds19@gmail.com</p>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row">
                 <div class="col copyright">
                     <p class=""><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
                 </div>

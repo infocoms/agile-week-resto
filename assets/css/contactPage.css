@@ -3,3 +3,8 @@
         width: 400px;
     }
 }
+
+header {
+    height: 10vh;
+    background-color: black;
+}
