@@ -1,5 +1,7 @@
 
 # FoodieFinder
+Hungry? trying to find the best restaurant? 
+try our page: https://janvdv96.github.io/agile-week-resto/
 
 ![](src/fodiefinder.png)
 
