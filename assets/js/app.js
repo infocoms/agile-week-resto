@@ -21,7 +21,7 @@ function fetcher() {
             console.log(data);
 
             for (i = 0; i < data.restaurants.length; i++) {
-                console.log(data.restaurants[i].restaurant.price_range);
+                console.log(data.restaurants[i].restaurant.is_delivering_now);
             }
 
             let target = document.getElementById("target");
@@ -38,6 +38,7 @@ function fetcher() {
                 let coin2 = temp.content.querySelector(".coin2");
                 let coin3 = temp.content.querySelector(".coin3");
                 let coin4 = temp.content.querySelector(".coin4");
+                let delivering = temp.content.querySelector(".delivers");
 
                 name.innerText = data.restaurants[i].restaurant.name;
                 rating.innerHTML = data.restaurants[i].restaurant.user_rating.aggregate_rating + "&#11088;";
@@ -70,6 +71,14 @@ function fetcher() {
                         coin4.style.opacity = "0.3";
                 }
 
+                if (data.restaurants[i].restaurant.is_delivering_now === 0){
+                    delivering.innerText = "Not Delivering";
+                    delivering.style.color = "red";
+                } else {
+                    delivering.innerText = "Delivering";
+                    delivering.style.color = "Green";
+                }
+
                 let clone = temp.content.cloneNode(true);
                 target.appendChild(clone);
             }
@@ -80,7 +89,8 @@ function fetcher() {
                 }).then(function (pictures) {
                 console.log(pictures);
                 let random = Math.floor(Math.random() * pictures.results.length);
-                target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat center center fixed";
+                target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat fixed";
+                target.style.backgroundSize = "cover";
                 target.style.border = "1px solid white";
             });
 
@@ -93,5 +103,4 @@ function fetcher() {
 
 document.getElementById("run").addEventListener("click", function () {
     fetcher();
-
 });
