@@ -1,4 +1,4 @@
-function fetcher() {
+    function fetcher() {
     let cityName = document.getElementById("input").value;
     let selected = document.getElementById("select").value;
     fetch("https://developers.zomato.com/api/v2.1/cities?q=" + cityName, {

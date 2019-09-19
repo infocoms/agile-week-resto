@@ -14,8 +14,10 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-
-<main class="container bg-light">
+<header class="header d-flex justify-content-center">
+    <img src="src/LOGO2.svg">
+</header>
+<main class="container bg-light mt-3">
     <section>
         <h1>Contact Us</h1>
         <h6>Have a question or a comment about our product?</h6><br>
@@ -32,14 +34,14 @@
         </div>
         <div class="col-xl-5 col-sm-12 d-flex justify-content-center">
             <form class="m-5" action="/action_page.php">
-                <label class="my-1 mx-auto" for="fname">First Name</label>
+                <label class="my-1 mx-auto pl-3" for="fname">Name</label>
                 <input class="m-2 form-control" type="text" id="fname" name="firstname" placeholder="Your name..">
-                <label class="my-1 mx-auto" for="lname">Last Name</label>
-                <input class="m-2 form-control" type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <label class="my-1 mx-auto" for="subject">Subject</label>
+                <label class="my-1 mx-auto pl-3">Email</label>
+                <input class="m-2 form-control" type="text" id="lname" name="lastname" placeholder="Your email address..">
+                <label class="my-1 mx-auto pl-3" for="subject">Subject</label>
                 <textarea rows="5" cols="30" class="m-2 form-control" id="subject" name="subject"
                           placeholder="Write your message here..."></textarea>
-                <input class="btn btn-primary" type="submit" value="Submit">
+                <input class="btn btn-primary mt-2 ml-3" type="submit" value="Submit">
             </form>
         </div>
     </div>
