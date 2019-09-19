@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>FoodieFinder</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet"/>
-    <link rel="icon" type="image/png" href="template.eloualid/images/3.png"/>
+    <link rel="icon" type="image/png" href="./src/Icon.png"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/contactPage.css">
@@ -51,30 +51,32 @@
 </header>
 <main class="container bg-light mt-3">
     <section>
-        <h1>Contact Us</h1>
-        <h6>Have a question or a comment about our product?</h6><br>
-        <p>Feel free to fill in our contact form and we will get back to you as soon as possible</p>
+        <h1 class="pt-3">Contact Us</h1>
+        <h6>Have a <em>question</em> or a <em>comment</em> about our product?</h6><br>
         <p>In our company we know that continuing to innovate and make small changes is very important so that the
-            consumer is always happy.</p>
+        consumer is always happy.</p>
+        <p>Feel free to fill in our contact form and we will get back to you as soon as possible.</p>
     </section>
     <div class="form-row">
         <div class="col-xl-7 col-sm-12">
             <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4997.312635127503!2d4.396653731048179!3d51.22540655952041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6591c88f09d%3A0x31d6c38718baba03!2sThe%20Beacon!5e0!3m2!1snl!2sbe!4v1568798409282!5m2!1snl!2sbe"
+                <iframe class="mt-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4997.312635127503!2d4.396653731048179!3d51.22540655952041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6591c88f09d%3A0x31d6c38718baba03!2sThe%20Beacon!5e0!3m2!1snl!2sbe!4v1568798409282!5m2!1snl!2sbe"
                         width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </div>
-        <div class="col-xl-5 col-sm-12 d-flex justify-content-center">
-            <form class="m-5" action="/action_page.php">
-                <label class="my-1 mx-auto pl-3" for="fname">Name</label>
-                <input class="m-2 form-control" type="text" id="fname" name="firstname" placeholder="Your name..">
-                <label class="my-1 mx-auto pl-3">Email</label>
-                <input class="m-2 form-control" type="text" id="lname" name="lastname"
-                       placeholder="Your email address..">
+        <div class="col-xl-5 col-sm-12 d-flex justify-content-top">
+            <form class="m-5" action="mailto:foodiefinds19@gmail.com" method="post" enctype="text/plain">
+                <label class="my-1 mx-auto pl-3" for="name">Name</label>
+                <input class="m-2 form-control" type="text" id="name" name="name" placeholder="Your name...">
+                <label class="my-1 mx-auto pl-3" for="from_email">Email</label>
+                <input class="m-2 form-control" type="text" id="from_email" name="from_email" placeholder="Your email address...">
                 <label class="my-1 mx-auto pl-3" for="subject">Subject</label>
-                <textarea rows="5" cols="30" class="m-2 form-control" id="subject" name="subject"
+                <input class="m-2 form-control" type="text" id="subject" name="subject" placeholder="Your subject...">
+                <label class="my-1 mx-auto pl-3" for="message">Message</label>
+                <textarea rows="5" cols="30" class="m-2 form-control" id="message" name="message"
                           placeholder="Write your message here..."></textarea>
-                <input class="btn btn-primary mt-2 ml-3" type="submit" value="Submit">
+                <input class="btn btn-primary mt-2 ml-3" type="submit" value="Send Email">
+                <input class="btn btn-primary mt-2 ml-3" type="reset" value="Reset">
             </form>
         </div>
     </div>
