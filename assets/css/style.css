@@ -4,6 +4,14 @@
     margin: 0;
     padding: 0;
 }
+header {
+    height: 10vh;
+    background: rgba(21, 47, 79, 0.6);
+}
+
+h4 {
+    color: beige;
+}
 
 body {
     background: black;
