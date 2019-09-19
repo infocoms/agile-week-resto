@@ -66,7 +66,7 @@ function fetcher() {
                 name.innerText = data.restaurants[i].restaurant.name;
 
                 if (data.restaurants[i].restaurant.photos) {
-                    if (data.restaurants[i].restaurant.photos.length > 5){
+                    if (data.restaurants[i].restaurant.photos.length > 5) {
                         for (let j = 0; j < 5; j++) {
                             photos.setAttribute("data-image" + j, data.restaurants[i].restaurant.photos[j].photo.url);
                         }
@@ -126,7 +126,7 @@ function fetcher() {
                 let clone = temp.content.cloneNode(true);
                 target.appendChild(clone);
 
-                if (i === 4){
+                if (i === 4) {
                     break;
                 }
             }
@@ -145,8 +145,6 @@ function fetcher() {
             let footer = document.getElementById("footer");
             footer.classList.remove("margin");
 
-        }).finally(function () {
-            document.getElementById("run").disabled = false;
         })
     })
 }
