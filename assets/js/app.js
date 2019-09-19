@@ -11,6 +11,9 @@ function fetcher() {
         console.log(city);
         let cityID = city.location_suggestions[0].id;
 
+        document.getElementById("targetText").innerText = "Showing results for " + city.location_suggestions[0].name;
+
+
         fetch("https://developers.zomato.com/api/v2.1/search?entity_type=city&sort=rating&establishment_type=" + selected + "&entity_id=" + cityID, {
             headers: {
                 "User-Key": "56c93a06a8b5ce046c8aa947fe8e78a1"
@@ -21,7 +24,7 @@ function fetcher() {
             console.log(data);
 
             for (i = 0; i < data.restaurants.length; i++) {
-                console.log(data.restaurants[i].restaurant.price_range);
+
             }
 
             let target = document.getElementById("target");
@@ -38,6 +41,29 @@ function fetcher() {
                 let coin2 = temp.content.querySelector(".coin2");
                 let coin3 = temp.content.querySelector(".coin3");
                 let coin4 = temp.content.querySelector(".coin4");
+                let delivering = temp.content.querySelector(".delivers");
+                let tagsPar = temp.content.querySelector(".tagsPar");
+
+                let tagsText = "";
+
+                let highlights = Array.from(data.restaurants[i].restaurant.highlights);
+                if (highlights.includes("Halal")) {
+                    tagsText += "Halal. "
+                }
+
+                if (highlights.includes("Vegan")) {
+                    tagsText += "Vegan. "
+                }
+
+                if (highlights.includes("Kid Friendly")) {
+                    tagsText += "Kid Friendly. "
+                }
+
+                if (!highlights.includes("Credit Card")) {
+                    tagsText += "Cash Only. "
+                }
+
+                tagsPar.innerText = tagsText;
 
                 name.innerText = data.restaurants[i].restaurant.name;
                 rating.innerHTML = data.restaurants[i].restaurant.user_rating.aggregate_rating + "&#11088;";
@@ -46,14 +72,17 @@ function fetcher() {
                 timings.innerText = data.restaurants[i].restaurant.timings;
 
                 coin1.style.background = "url('src/coin.svg')";
-                coin2.style.background = "url('src/coin.svg')";
-                coin3.style.background = "url('src/coin.svg')";
-                coin4.style.background = "url('src/coin.svg')";
-
                 coin1.style.opacity = "1";
+                coin1.style.backgroundRepeat = "no-repeat";
+                coin2.style.background = "url('src/coin.svg')";
                 coin2.style.opacity = "1";
+                coin2.style.backgroundRepeat = "no-repeat";
+                coin3.style.background = "url('src/coin.svg')";
                 coin3.style.opacity = "1";
+                coin3.style.backgroundRepeat = "no-repeat";
+                coin4.style.background = "url('src/coin.svg')";
                 coin4.style.opacity = "1";
+                coin4.style.backgroundRepeat = "no-repeat";
 
                 switch (data.restaurants[i].restaurant.price_range) {
 
@@ -70,6 +99,14 @@ function fetcher() {
                         coin4.style.opacity = "0.3";
                 }
 
+                if (data.restaurants[i].restaurant.is_delivering_now === 0) {
+                    delivering.innerText = "Not Delivering";
+                    delivering.style.color = "red";
+                } else {
+                    delivering.innerText = "Delivering";
+                    delivering.style.color = "Green";
+                }
+
                 let clone = temp.content.cloneNode(true);
                 target.appendChild(clone);
             }
@@ -80,7 +117,8 @@ function fetcher() {
                 }).then(function (pictures) {
                 console.log(pictures);
                 let random = Math.floor(Math.random() * pictures.results.length);
-                target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat center center fixed";
+                target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat fixed";
+                target.style.backgroundSize = "cover";
                 target.style.border = "1px solid white";
             });
 
@@ -93,5 +131,4 @@ function fetcher() {
 
 document.getElementById("run").addEventListener("click", function () {
     fetcher();
-
 });

@@ -8,46 +8,51 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>FoodieFinder</title>
-    <link rel="icon" type="image/png" href="1.png"/>
+    <link rel="icon" type="image/png" href="./src/Icon.png"/>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
 
-<div class="container p-4 text-center mt-5">
-
+<div class="container p-4 text-center mt-2">
     <div class="row">
         <div class="col mx-auto">
-            <div id="bigLogo" class="mx-auto">
-            </div>
-        </div>
-
-        <div class="container p-4 text-center mt-5">
-            <form>
-                <div class="form-group form-row mx-auto">
-                    <div class="col-5 ml-auto">
-                        <input type="text" id="input" class="form-control form-control-lg"
-                               placeholder="City, but not in Belgium" required>
-                    </div>
-                    <div class="col-4">
-                        <select class="form-control form-control-lg" id="select">
-                            <option value="275">Pizzeria</option>
-                            <option value="101">Diner</option>
-                            <option value="271">Sandwich Shop</option>
-                            <option value="18">Fine Dining</option>
-                            <option value="16">Casual Dining</option>
-                            <option value="281">Fast Food</option>
-                            <option value="91">Bistro</option>
-                            <option value="1">Café</option>
-                        </select>
-                    </div>
-                    <div class="btn btn-danger mr-auto ml-2" id="run">Find Food!</div>
-                </div>
-            </form>
-            <div id="target" class="p-3"></div>
+            <div id="bigLogo" class="mx-auto"></div>
         </div>
     </div>
+</div>
+
+<div class="container p-4 text-center">
+    <form>
+        <div class="row text-center">
+            <div class="col-xl-7 col-lg-5 col-md-7 mx-auto mt-1">
+                <input type="text" id="input" class="form-control form-control-lg"
+                       placeholder="City, but not in Belgium" required>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-xl-7 col-lg-5 col-md-7 mx-auto mt-1">
+                <select class="form-control form-control-lg" id="select">
+                    <option value="275">Pizzeria</option>
+                    <option value="101">Diner</option>
+                    <option value="271">Sandwich Shop</option>
+                    <option value="18">Fine Dining</option>
+                    <option value="16">Casual Dining</option>
+                    <option value="281">Fast Food</option>
+                    <option value="91">Bistro</option>
+                    <option value="1">Café</option>
+                </select>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-xl-7 col-lg-5 col-md-7 mx-auto mt-1">
+                <div class="btn btn-danger form-control" id="run">Find Food!</div>
+            </div>
+        </div>
+    </form>
+    <h2 id="targetText" class="text-white mt-2"></h2>
+    <div id="target" class="p-3 mt-3"></div>
 </div>
 
 <template id="temp">
@@ -70,17 +75,26 @@
         </div>
         <div class="row mt-3 text-center">
             <div class="col">
-                <p class="timings"></p>
+                <p class="timings my-auto"></p>
             </div>
         </div>
-        <div class="row">
-            <div class="col coins">
-                <div class="coin1"></div>
-                <div class="coin2"></div>
-                <div class="coin3"></div>
-                <div class="coin4"></div>
+        <div class="row mt-1 mx-auto">
+            <div class="col-4 p-2">
+                <div class="coins mx-auto">
+                    <div class="coin1 ml-auto"></div>
+                    <div class="coin2"></div>
+                    <div class="coin3"></div>
+                    <div class="coin4 mr-auto"></div>
+                </div>
             </div>
-            <div class="col delivers"></div>
+            <div class="col-4 p-2">
+                <div class="delivers text-center"></div>
+            </div>
+            <div class="col-4">
+                <div class="tags p-2">
+                    <p class="tagsPar"></p>
+                </div>
+            </div>
         </div>
     </div>
 </template>

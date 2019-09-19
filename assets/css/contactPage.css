@@ -3,3 +3,21 @@
         width: 400px;
     }
 }
+
+a {
+color: beige;
+}
+header {
+    height: 10vh;
+    background: rgba(21, 47, 79, 0.6);
+
+}
+
+.footer {
+    background: rgba(21, 47, 79, 0.6);
+    width: 100%;
+}
+ body {
+     background-image: url("../../src/rest.jpeg");
+ }
+

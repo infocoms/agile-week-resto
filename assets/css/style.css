@@ -20,24 +20,18 @@ option {
 #bigLogo{
     background: url("../../src/LOGO2.svg") no-repeat center center;
     background-size: 100%;
-    width: 40vw;
+    width: 60vw;
     height: 200px;
-}
-
-#run {
-    line-height: 35px;
 }
 
 #target {
     object-fit: cover;
-    background-size: cover;
+
 }
 
 /* Template Styling */
 .name {
-    font-weight: bold;
-    /*-webkit-text-stroke: 1px black;*/
-    letter-spacing: 1.6px;
+
 }
 
 .location {
@@ -58,6 +52,11 @@ option {
 
 .temp-card {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+.delivers{
+    font-weight: bold;
+    letter-spacing: 1.6px;
 }
 
 /* /Template */
@@ -85,46 +84,18 @@ a:hover {
 }
 
 .coin1, .coin2, .coin3, .coin4 {
-    height: 30px;
-    width: 30px;
+    height: 100%;
+    width: 17%;
     margin-right: 3px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.teamPic{
-    margin-left: 6%;
-    margin-right: 6%;
-    height: 404px;
-    width: 561px;
-    background-color: yellow;
-    background-image: url("../../src/group.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.tags{
+    display: flex;
 }
 
-.container img{
-    width: 441px;
-    height: 340px;
-    float: left;
-    margin-right: 30px;
-}
-.container p {
-    text-align: justify;
-    font-size: 18px;
-    font-weight: 100;
-    margin-top: 20px;
-}
-.title{
-    padding-top: 20px;
-    padding-left: 65px;
-    font-size: 60px;
-}
-.title1{
-    padding-top: 20px;
-    padding-left: 65px;
-    letter-spacing: 1px;
-
+.tags div{
+    height: 100%;
+    width: 30%;
 }
