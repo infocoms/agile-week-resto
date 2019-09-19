@@ -84,9 +84,18 @@ a:hover {
 }
 
 .coin1, .coin2, .coin3, .coin4 {
-    height: 30px;
-    width: 30px;
+    height: 100%;
+    width: 17%;
     margin-right: 3px;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.tags{
+    display: flex;
+}
+
+.tags div{
+    height: 100%;
+    width: 30%;
 }
