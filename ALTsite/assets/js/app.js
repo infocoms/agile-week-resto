@@ -1,5 +1,4 @@
 function fetcher() {
-    document.getElementById("run").disabled = true;
     let cityName = document.getElementById("input").value;
     let selected = document.getElementById("select").value;
     fetch("https://developers.zomato.com/api/v2.1/cities?q=" + cityName, {
@@ -145,8 +144,6 @@ function fetcher() {
             let footer = document.getElementById("footer");
             footer.classList.remove("margin");
 
-        }).finally(function () {
-            document.getElementById("run").disabled = false;
         })
     })
 }
