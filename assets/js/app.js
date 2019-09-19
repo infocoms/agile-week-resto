@@ -23,14 +23,10 @@ function fetcher() {
         }).then(function (data) {
             console.log(data);
 
-            for (i = 0; i < data.restaurants.length; i++) {
-
-            }
-
             let target = document.getElementById("target");
             target.innerHTML = "";
 
-            for (i = 0; i < 5; i++) {
+            for (i = 0; i < data.restaurants.length; i++) {
                 let temp = document.getElementById("temp");
                 let name = temp.content.querySelector(".name");
                 let rating = temp.content.querySelector(".rating");
@@ -68,13 +64,17 @@ function fetcher() {
 
                 name.innerText = data.restaurants[i].restaurant.name;
 
-
-                for (let j = 0; j < 5; j++) {
-                    photos.setAttribute("data-image"+j, data.restaurants[i].restaurant.photos[j].photo.url);
+                if (data.restaurants[i].restaurant.photos) {
+                    if (data.restaurants[i].restaurant.photos.length > 5){
+                        for (let j = 0; j < 5; j++) {
+                            photos.setAttribute("data-image" + j, data.restaurants[i].restaurant.photos[j].photo.url);
+                        }
+                    } else {
+                        for (let j = 0; j < data.restaurants[i].restaurant.photos[j].length; j++) {
+                            photos.setAttribute("data-image" + j, data.restaurants[i].restaurant.photos[j].photo.url);
+                        }
+                    }
                 }
-
-
-
 
                 rating.innerHTML = data.restaurants[i].restaurant.user_rating.aggregate_rating + "&#11088;";
                 location.innerText = data.restaurants[i].restaurant.location.address;
@@ -109,6 +109,11 @@ function fetcher() {
                         coin4.style.opacity = "0.3";
                 }
 
+                photos.src = photos.getAttribute("data-image" + "1");
+                //photos.style.background = "url('" + photos.getAttribute("data-image" + "1") + "') center center";
+                photos.style.border = "1px solid white";
+
+
                 if (data.restaurants[i].restaurant.is_delivering_now === 0) {
                     delivering.innerText = "Not Delivering";
                     delivering.style.color = "red";
@@ -119,9 +124,13 @@ function fetcher() {
 
                 let clone = temp.content.cloneNode(true);
                 target.appendChild(clone);
+
+                if (i === 4){
+                    break;
+                }
             }
 
-            fetch("https://api.unsplash.com/search/photos/?client_id=e74ca46b22fd8cbf5fbb5c231739839cb4730ae959f74a65d24583789012d6c3&page=1&query=" + data.restaurants[2].restaurant.location.city)
+            fetch("https://api.unsplash.com/search/photos/?client_id=e74ca46b22fd8cbf5fbb5c231739839cb4730ae959f74a65d24583789012d6c3&page=1&query=" + data.restaurants[0].restaurant.location.city)
                 .then(function (response) {
                     return response.json()
                 }).then(function (pictures) {
