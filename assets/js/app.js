@@ -110,7 +110,7 @@ function fetcher() {
                         coin4.style.opacity = "0.3";
                 }
 
-                photos.src = photos.getAttribute("data-image" + "1");
+                photos.src = photos.getAttribute("data-image" + i);
                 //photos.style.background = "url('" + photos.getAttribute("data-image" + "1") + "') center center";
                 photos.style.border = "1px solid white";
 
@@ -144,7 +144,6 @@ function fetcher() {
 
             let footer = document.getElementById("footer");
             footer.classList.remove("margin");
-
         })
     })
 }
