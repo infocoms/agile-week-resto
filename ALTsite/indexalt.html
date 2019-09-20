@@ -12,58 +12,54 @@
 </head>
 
 
-
 <body>
 <main id="logoBG">
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 box-shadow text-white">
-    <h5 class="my-0 mr-md-auto font-weight-normal">Foodie Finder</h5>
-    <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-white" href="#">Home</a>
-        <a class="p-2 text-white" href="#">About Us</a>
-        <a class="p-2 text-white" href="#">Contact Us</a>
-    </nav>
-</div>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 box-shadow text-white">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Foodie Finder</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-white" href="#">Home</a>
+            <a class="p-2 text-white" href="#">About Us</a>
+            <a class="p-2 text-white" href="#">Contact Us</a>
+        </nav>
+    </div>
+    <section class="search-sec">
+        <div class="container">
+            <form action="#" method="post" novalidate="novalidate">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-3 col-sm-12 p-0">
+                                <input type="text" id="input" class="form-control search-slt rounded-left"
+                                       placeholder="Enter City Name">
+                            </div>
 
-
-<section class="search-sec">
-    <div class="container">
-        <form action="#" method="post" novalidate="novalidate">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-3 col-sm-12 p-0">
-                            <input type="text" id="input" class="form-control search-slt rounded-left" placeholder="Enter City Name">
-                        </div>
-
-                        <div class="col-lg-4 col-md-3 col-sm-12 p-0">
-                            <select class="form-control search-slt" id="select">
-                                <option value="275">Pizzeria</option>
-                                <option value="101">Diner</option>
-                                <option value="271">Sandwich Shop</option>
-                                <option value="18">Fine Dining</option>
-                                <option value="16">Casual Dining</option>
-                                <option value="281">Fast Food</option>
-                                <option value="91">Bistro</option>
-                                <option value="1">Café</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
-                            <button type="button" class="btn btn-danger wrn-btn" id="run">Search</button>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
-                            <button type="button" class="btn btn-warning wrn-btn rounded-right" id="geo">Find me!</button>
+                            <div class="col-lg-4 col-md-3 col-sm-12 p-0">
+                                <select class="form-control search-slt" id="select">
+                                    <option value="275">Pizzeria</option>
+                                    <option value="101">Diner</option>
+                                    <option value="271">Sandwich Shop</option>
+                                    <option value="18">Fine Dining</option>
+                                    <option value="16">Casual Dining</option>
+                                    <option value="281">Fast Food</option>
+                                    <option value="91">Bistro</option>
+                                    <option value="1">Café</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                                <button type="button" class="btn btn-danger wrn-btn" id="run">Search</button>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                                <button type="button" class="btn btn-warning wrn-btn rounded-right" id="geo">Find me!
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
-    </div>
-</section>
+            </form>
+        </div>
+    </section>
     <h2 id="targetText" class="text-white mt-2 text-center"></h2>
     <div class="p-4 mt-4" id="target"></div>
-
-
-
 </main>
 
 <!-- alt template -->
@@ -76,7 +72,7 @@
         <div class="card-body">
             <h1 class="card-title pricing-card-title rating">$0 <small class="text-muted">/ mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-                <li class = "phone">10 users included</li>
+                <li class="phone">10 users included</li>
                 <li class="timings">2 GB of storage</li>
                 <li class="location">2 GB of storage</li>
                 <li class="delivers text-center">Email support</li>
