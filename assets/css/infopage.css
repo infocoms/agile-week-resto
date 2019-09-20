@@ -4,7 +4,6 @@
 }
 
 body {
-    background: black;
     font-family: 'Raleway', sans-serif;
     background: url("../../src/rest.jpeg") center center no-repeat fixed;
     background-size: cover;
@@ -26,7 +25,7 @@ body {
 }
 
 header {
-    height: 10vh;
+
     background: rgba(21, 47, 79, 0.6);
 }
 h4 {
@@ -53,4 +52,24 @@ h4 {
 .footer {
     background: rgba(21, 47, 79, 0.6);
     width: 100%;
+}
+
+.location {
+    font-style: italic;
+    font-weight: bold;
+}
+
+a {
+    color: #D6924A;
+}
+
+a:hover {
+    color: white;
+}
+
+
+.rounded-circle{
+    margin-left: 40px;
+    width:440px;
+    height:420px;
 }

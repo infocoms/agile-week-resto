@@ -110,8 +110,6 @@ function fetcher() {
                 }
 
                 photos.src = photos.getAttribute("data-image" + "1");
-                //photos.style.background = "url('" + photos.getAttribute("data-image" + "1") + "') center center";
-                photos.style.border = "1px solid white";
 
 
                 if (data.restaurants[i].restaurant.is_delivering_now === 0) {
@@ -138,11 +136,8 @@ function fetcher() {
                 let random = Math.floor(Math.random() * pictures.results.length);
                 target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat fixed";
                 target.style.backgroundSize = "cover";
-                target.style.border = "1px solid white";
             });
 
-            let footer = document.getElementById("footer");
-            footer.classList.remove("margin");
 
         })
     })
