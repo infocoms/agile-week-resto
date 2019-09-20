@@ -4,6 +4,9 @@ body{
     margin: 0;
 }
 
+.wrapper{
+    display: flex;
+}
 
 .search-sec{
     padding: 2rem;
