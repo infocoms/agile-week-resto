@@ -18,9 +18,9 @@
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 box-shadow text-white">
         <h5 class="my-0 mr-md-auto font-weight-normal logoName">Foodie Finder</h5>
         <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-white" href="#">Home</a>
-            <a class="p-2 text-white" href="#">About Us</a>
-            <a class="p-2 text-white" href="#">Contact Us</a>
+            <a class="p-2 text-white" href="index.html">Home</a>
+            <a class="p-2 text-white" href="infoPage.html">Info</a>
+            <a class="p-2 text-white" href="contactPage.html">Contact</a>
         </nav>
     </div>
     <section class="search-sec">
@@ -36,14 +36,14 @@
 
                             <div class="col-lg-4 col-md-3 col-sm-12 p-0">
                                 <select class="form-control search-slt" id="select">
-                                    <option value="275">Pizzeria</option>
-                                    <option value="101">Diner</option>
-                                    <option value="271">Sandwich Shop</option>
-                                    <option value="18">Fine Dining</option>
                                     <option value="16">Casual Dining</option>
-                                    <option value="281">Fast Food</option>
+                                    <option value="18">Fine Dining</option>
                                     <option value="91">Bistro</option>
                                     <option value="1">Café</option>
+                                    <option value="101">Diner</option>
+                                    <option value="271">Sandwich Shop</option>
+                                    <option value="275">Pizzeria</option>
+                                    <option value="281">Fast Food</option>
                                 </select>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-12 p-0">
@@ -60,24 +60,28 @@
         </div>
     </section>
     <h2 id="targetText" class="text-white mt-2 text-center"></h2>
-    <div class="p-4 mt-4 card-deck mx-5 rounded" id="target"></div>
+    <div class="p-4 mt-4 card-deck mx-5 rounded" id="target">
+        <div class="wrapper justify-content-center">
+            <img src="src/countries.png" alt="countries" class="rounded">
+        </div>
+    </div>
 </main>
 
 <!-- alt template -->
 <template id="temp">
-    <div class="card mb-4 box-shadow text-center">
+    <div class="card mb-4 box-shadow grow">
         <div class="card-header">
             <h4 class="my-0 font-weight-normal name text-center">Free</h4>
         </div>
-        <img class="card-img-top photos grow" src="..." alt="Card image cap">
+        <img class="card-img-top photos" src="..." alt="Card image cap">
         <div class="card-body">
-            <h1 class="card-title pricing-card-title rating">$0 <small class="text-muted">/ mo</small></h1>
+            <h1 class="card-title pricing-card-title rating text-center">$0 <small class="text-muted">/ mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
-                <li class="phone">10 users included</li>
-                <li class="timings">2 GB of storage</li>
-                <li class="location">2 GB of storage</li>
+                <li class="phone text-center">10 users included</li>
+                <li class="timings text-center">2 GB of storage</li>
+                <li class="location text-center">2 GB of storage</li>
                 <li class="delivers text-center">Email support</li>
-                <li class="tagsPar">Help center access</li>
+                <li class="tagsPar text-center">Help center access</li>
             </ul>
 
             <div class="coins mx-auto">
@@ -137,9 +141,6 @@
         </div>
     </div>
 </template>
-
-
-
 <footer class="page-footer text-white">
     <div class="pt-4 footer margin" id="footer">
         <div class="container">
@@ -171,12 +172,6 @@
         </div>
     </div>
 </footer>
-
-
-
-
-
-
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="assets/js/geolocator.js"></script>
