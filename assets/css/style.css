@@ -76,7 +76,10 @@ body{
 }
 
 .footer{
-    background-color: black;
+    background: rgba(21, 47, 79, 0.6);
+}
+.margin{
+    margin-top: 40vh;
 }
 
 .logoName{
