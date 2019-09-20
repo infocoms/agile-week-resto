@@ -5,6 +5,11 @@ body{
     font-family: 'Manjari', sans-serif;
 }
 
+header {
+
+    background: rgba(21, 47, 79, 0.6);
+}
+
 .wrapper{
     display: flex;
 }
