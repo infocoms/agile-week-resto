@@ -83,3 +83,28 @@ Now we will show some responses from our app.
 - Things we planned but no time for....
     - Better formatting for information display (such as phone number clickablity)
     - adding button to lead to website
+    
+### Audit Results
+
+Index
+- Performance: 97 
+- Accessiblity: 61
+- Best Practices: 100
+- SEO: 89
+- Validation: OK
+
+About Us
+
+- Performance: 97
+- Accessiblity: 90
+- Best Practices: 86
+- SEO: 64
+- Validation: OK
+
+Contact Page
+
+- Performance: 99 
+- Accessiblity: 72
+- Best Practices: 100
+- SEO: 60
+- Validation: OK
