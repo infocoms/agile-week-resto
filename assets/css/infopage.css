@@ -13,10 +13,6 @@ body {
     height: 30px;
     margin-left: -430px;
 }
-.footer {
-    background: rgba(21, 47, 79, 0.6);
-    width: 100%;
-}
 
 
 .teamPic{
@@ -68,10 +64,7 @@ h4 {
     padding-left: 23px;
     letter-spacing: 1px;
 }
-.footer {
-    background: rgba(21, 47, 79, 0.6);
-    width: 100%;
-}
+
 
 .location {
     font-style: italic;
