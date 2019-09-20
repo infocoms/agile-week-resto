@@ -2,8 +2,23 @@ body{
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     margin: 0;
+    font-family: 'Manjari', sans-serif;
 }
 
+header {
+
+    background: rgba(21, 47, 79, 0.6);
+}
+
+.wrapper{
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .wrapper img{
+        width: 100%;
+    }
+}
 
 .search-sec{
     padding: 2rem;
@@ -68,6 +83,19 @@ body{
 
 .card-deck {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: .5rem;
+}
+
+.footer{
+    background: rgba(21, 47, 79, 0.6);
+}
+.margin{
+    margin-top: 40vh;
+}
+
+.logoName{
+    text-shadow: #000000 1px 0 10px;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
 }

@@ -13,7 +13,7 @@ function fetcher() {
 
         document.getElementById("targetText").innerText = "Showing results for " + city.location_suggestions[0].name;
         let target = document.getElementById("target");
-        target.innerHTML = "<img src='./src/loading.gif' alt='loading'>";
+        target.innerHTML = "<div class='wrapper justify-content-center'><img src='./src/loading.gif' alt='loading'></div>";
 
         fetch("https://developers.zomato.com/api/v2.1/search?entity_type=city&sort=rating&establishment_type=" + selected + "&entity_id=" + cityID, {
             headers: {
@@ -138,7 +138,6 @@ function fetcher() {
                 let random = Math.floor(Math.random() * pictures.results.length);
                 target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat fixed";
                 target.style.backgroundSize = "cover";
-                target.style.border = "1px solid white";
             });
 
             let footer = document.getElementById("footer");
