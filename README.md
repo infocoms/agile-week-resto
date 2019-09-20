@@ -77,4 +77,9 @@ Now we will show some responses from our app.
 
 ### Bugs and limitations
 
-
+- We are limited by the number of countries from the API.
+- Our app focused on mobile responsiveness so the experience for the desktop user may not be as pleasant.
+- Some times pictures are not accurate do to a bug
+- Things we planned but no time for....
+    - Better formatting for information display (such as phone number clickablity)
+    - adding button to lead to website
