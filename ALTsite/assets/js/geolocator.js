@@ -1,4 +1,4 @@
-var positionArray = [];
+let positionArray = [];
 
 function getCoords () {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -9,8 +9,8 @@ function getCoords () {
                 let city = response.data.results[0].components.city;
                 console.log(city);
 
-                var result = confirm("Add current location to box? "+ city);
-                if (result == true) {
+                let result = confirm("Add current location to box? "+ city);
+                if (result === true) {
                     document.getElementById("input").value = city;
                 } else {
                     alert("Cancel was pressed.");

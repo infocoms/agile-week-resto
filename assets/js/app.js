@@ -13,7 +13,8 @@ function fetcher() {
         let cityID = city.location_suggestions[0].id;
 
         document.getElementById("targetText").innerText = "Showing results for " + city.location_suggestions[0].name;
-
+        let target = document.getElementById("target");
+        target.innerHTML = "<img src='./src/loading.gif' alt='loading'>";
 
         fetch("https://developers.zomato.com/api/v2.1/search?entity_type=city&sort=rating&establishment_type=" + selected + "&entity_id=" + cityID, {
             headers: {
@@ -24,7 +25,6 @@ function fetcher() {
         }).then(function (data) {
             console.log(data);
 
-            let target = document.getElementById("target");
             target.innerHTML = "";
 
             for (i = 0; i < data.restaurants.length; i++) {
@@ -149,7 +149,7 @@ function fetcher() {
 }
 
 function photoChanger () {
-    for (var i = 0; i < 5; i++) {
+    for (let i = 0; i < 5; i++) {
 
     }
 }
