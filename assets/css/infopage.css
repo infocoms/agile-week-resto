@@ -8,6 +8,11 @@ body {
     background: url("../../src/rest.jpeg") center center no-repeat fixed;
     background-size: cover;
 }
+#logo{
+    width: 35px;
+    height: 30px;
+    margin-left: -430px;
+}
 .footer {
     background: rgba(21, 47, 79, 0.6);
     width: 100%;
@@ -18,11 +23,11 @@ body {
     width: 100%;
 }
 
-.container{
-    padding-bottom: 35px;
-    margin-top: 20px;
-    padding-right: 40px;
-}
+/*.container{*/
+/*    padding-bottom: 35px;*/
+/*    margin-top: 20px;*/
+/*    padding-right: 40px;*/
+/*}*/
 
 header {
 
@@ -33,21 +38,30 @@ h4 {
 }
 
 
-.container {
+.container{
     font-size: 18px;
     font-weight: 100;
     margin-top: 20px;
 }
 
-/*.container1{*/
-/*    text-align: justify;*/
-/*}*/
+#conta{
+    text-align: justify;
+
+}
+#p{
+    margin-right:35px ;
+}
+#pp{
+    margin-right: 35px;
+}
 
 
 .title{
     padding-top: 20px;
     padding-left: 23px;
     font-size: 60px;
+    margin-right:35px ;
+
 }
 .title1{
     padding-top: 20px;
