@@ -90,3 +90,6 @@ a:hover {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
