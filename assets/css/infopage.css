@@ -33,8 +33,8 @@ h4 {
 }
 
 
-.container p {
-    text-align: justify;
+.container {
+
     font-size: 18px;
     font-weight: 100;
     margin-top: 20px;
@@ -57,14 +57,6 @@ h4 {
 .location {
     font-style: italic;
     font-weight: bold;
-}
-
-a {
-    color: #D6924A;
-}
-
-a:hover {
-    color: white;
 }
 
 
