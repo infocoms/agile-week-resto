@@ -138,7 +138,6 @@ function fetcher() {
                 let random = Math.floor(Math.random() * pictures.results.length);
                 target.style.background = "url('" + pictures.results[random].urls.regular + "') no-repeat fixed";
                 target.style.backgroundSize = "cover";
-                target.style.border = "1px solid white";
             });
 
             let footer = document.getElementById("footer");
