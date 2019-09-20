@@ -1,5 +1,4 @@
 function fetcher() {
-    document.getElementById("run").disabled = true;
     let cityName = document.getElementById("input").value;
     let selected = document.getElementById("select").value;
     fetch("https://developers.zomato.com/api/v2.1/cities?q=" + cityName, {
@@ -66,8 +65,8 @@ function fetcher() {
                 name.innerText = data.restaurants[i].restaurant.name;
 
                 if (data.restaurants[i].restaurant.photos) {
-                    if (data.restaurants[i].restaurant.photos.length > 5) {
-                        for (let j = 0; j < 5; j++) {
+                    if (data.restaurants[i].restaurant.photos.length > 8) {
+                        for (let j = 0; j < 8; j++) {
                             photos.setAttribute("data-image" + j, data.restaurants[i].restaurant.photos[j].photo.url);
                         }
                     } else {
@@ -126,7 +125,7 @@ function fetcher() {
                 let clone = temp.content.cloneNode(true);
                 target.appendChild(clone);
 
-                if (i === 4) {
+                if (i === 7) {
                     break;
                 }
             }
@@ -144,15 +143,11 @@ function fetcher() {
 
             let footer = document.getElementById("footer");
             footer.classList.remove("margin");
+
         })
     })
 }
 
-function photoChanger () {
-    for (let i = 0; i < 5; i++) {
-
-    }
-}
 document.getElementById("run").addEventListener("click", function () {
     fetcher();
 });

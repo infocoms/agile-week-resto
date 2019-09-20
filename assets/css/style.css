@@ -1,88 +1,44 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap');
-
-* {
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     margin: 0;
-    padding: 0;
-}
-header {
-    background: rgba(21, 47, 79, 0.6);
 }
 
-h4 {
-    color: beige;
+
+.search-sec{
+    padding: 2rem;
 }
-
-body {
-    background: black;
-    font-family: 'Raleway', sans-serif;
-    background: url("../../src/rest.jpeg") center center no-repeat fixed;
-    background-size: cover;
-}
-
-option {
-    padding: 5px;
-    border-radius: 10px;
-}
-
-#bigLogo{
-    background: url("../../src/LOGO2.svg") no-repeat center center;
-    background-size: 100%;
-    width: 60vw;
-    height: 200px;
-}
-
-#target {
-    object-fit: cover;
-
-}
-
-/* Template Styling */
-.name {
-
-}
-
-.location {
-    font-style: italic;
-    font-weight: bold;
-}
-
-.rating {
-    font-size: 200%;
-    font-weight: bold;
-    /*-webkit-text-stroke: 1px black;*/
-    letter-spacing: 1.6px;
-}
-
-.timings {
-    font-style: italic;
-}
-
-.temp-card {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.delivers{
-    font-weight: bold;
-    letter-spacing: 1.6px;
-}
-
-/* /Template */
-
-.footer {
-    background: rgba(21, 47, 79, 0.6);
+.search-slt{
+    display: block;
     width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
 }
 
-.margin {
-    margin-top: 20vh;
+#logoBG{
+    /*background-image: url("https://directorist.com/theme/demo/direo/wp-content/uploads/2019/04/intro-1.jpg");*/
+    background-size: cover;
+    background-position: center;
 }
 
-a {
-    color: #D6924A;
-}
-
-a:hover {
-    color: white;
+.card-img-top{
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 250px;
 }
 
 .coins {
@@ -100,25 +56,18 @@ a:hover {
 
 .tags{
     display: flex;
+    text-align: center;
 }
-
-.tags div{
-    height: 100%;
-    width: 30%;
-}
-
-.photos{
-    max-width: 100%;
-    width: 100%;
-    max-height: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.photo-wrap{
-    height: 100px;
-    width: 100px;
+.card-deck{
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .grow { transition: all .2s ease-in-out; }
 .grow:hover { transform: scale(1.1); }
+
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    grid-gap: .5rem;
+}

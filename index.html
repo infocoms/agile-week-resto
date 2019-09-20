@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,73 +7,90 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href=assets/css/style.css>
     <title>FoodieFinder</title>
-    <link rel="icon" type="image/png" href="./src/Icon.png"/>
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
+
 <body>
-
-<header>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 shadow-sm">
-        <h4 class="my-0 mr-md-auto font-weight-normal text-white">FoodieFinder</h4>
+<main id="logoBG">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 box-shadow text-white">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Foodie Finder</h5>
         <nav class="my-2 my-md-0 mr-md-3">
-            <a class="p-2 text-white" href="./index.html">Home</a>
-            <a class="p-2 text-white" href="infoPage.html">Info</a>
-            <a class="p-2 text-white" href="./contactPage.html">Contact</a>
-
-
+            <a class="p-2 text-white" href="index.html">Home</a>
+            <a class="p-2 text-white" href="infoPage.html">About Us</a>
+            <a class="p-2 text-white" href="contactPage.html">Contact Us</a>
         </nav>
     </div>
+    <section class="search-sec">
+        <div class="container">
+            <form action="#" method="post" novalidate="novalidate">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-3 col-sm-12 p-0">
+                                <input type="text" id="input" class="form-control search-slt rounded-left"
+                                       placeholder="Enter City Name">
+                            </div>
 
-</header>
+                            <div class="col-lg-4 col-md-3 col-sm-12 p-0">
+                                <select class="form-control search-slt" id="select">
+                                    <option value="16">Casual Dining</option>
+                                    <option value="18">Fine Dining</option>
+                                    <option value="91">Bistro</option>
+                                    <option value="1">Café</option>
+                                    <option value="101">Diner</option>
+                                    <option value="271">Sandwich Shop</option>
+                                    <option value="275">Pizzeria</option>
+                                    <option value="281">Fast Food</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                                <button type="button" class="btn btn-danger wrn-btn" id="run">Search</button>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                                <button type="button" class="btn btn-warning wrn-btn rounded-right" id="geo">Find me!
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <h2 id="targetText" class="text-white mt-2 text-center"></h2>
+    <div class="p-4 mt-4 card-deck mx-5" id="target"></div>
+</main>
 
-<div class="container p-4 text-center mt-2">
-    <div class="row">
-        <div class="col mx-auto">
-            <div id="bigLogo" class="mx-auto"></div>
+<!-- alt template -->
+<template id="temp">
+    <div class="card mb-4 box-shadow grow">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal name text-center">Free</h4>
+        </div>
+        <img class="card-img-top photos" src="..." alt="Card image cap">
+        <div class="card-body">
+            <h1 class="card-title pricing-card-title rating">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+                <li class="phone">10 users included</li>
+                <li class="timings">2 GB of storage</li>
+                <li class="location">2 GB of storage</li>
+                <li class="delivers text-center">Email support</li>
+                <li class="tagsPar">Help center access</li>
+            </ul>
+
+            <div class="coins mx-auto">
+                <div class="coin1 ml-auto"></div>
+                <div class="coin2"></div>
+                <div class="coin3"></div>
+                <div class="coin4 mr-auto"></div>
+            </div>
         </div>
     </div>
-</div>
+</template>
 
-<div class="container p-4 text-center">
-    <form>
-        <div class="row text-center">
-            <div class="col-xl-7 col-lg-5 col-md-7 mx-auto mt-1">
-                <input type="text" id="input" class="form-control form-control-lg"
-                       placeholder="City, but not in Belgium" required>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-xl-7 col-lg-5 col-md-7 mx-auto mt-1">
-                <select class="form-control form-control-lg" id="select">
-                    <option value="275">Pizzeria</option>
-                    <option value="101">Diner</option>
-                    <option value="271">Sandwich Shop</option>
-                    <option value="18">Fine Dining</option>
-                    <option value="16">Casual Dining</option>
-                    <option value="281">Fast Food</option>
-                    <option value="91">Bistro</option>
-                    <option value="1">Café</option>
-                </select>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-xl-7 col-lg-5 col-md-7 mx-auto mt-1">
-                <div class="btn btn-danger form-control" id="run">Find Food!</div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-xl-7 col-lg-5 col-md-7 mx-auto mt-1">
-                <div class="btn btn-primary form-control" id="geo">Find Me!</div>
-            </div>
-        </div>
-    </form>
-    <h2 id="targetText" class="text-white mt-2"></h2>
-    <div id="target" class="p-3 mt-3"></div>
-</div>
-
-<template id="temp">
+<!-- orig template -->
+<template id="OGTemp">
     <div class="border border-light mb-5 text-light p-3 temp-card">
         <div class="row text-center text-center">
             <div class="col-5">
@@ -120,40 +137,9 @@
     </div>
 </template>
 
-<footer class="page-footer text-white">
-    <div class="pt-4 footer margin" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-xs-12 about-company">
-                    <h2>FoodieFinder</h2>
-                    <p class="pr-5 text-white-50">FoodieFinder is a company specialized in finding the best
-                        restaurants
-                        or cafes from your location. </p>
-                    <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a><a href="#"><i
-                            class="fa fa-linkedin-square"></i></a></p>
-                </div>
-                <div class="col-lg-3 col-xs-12 links">
-
-                </div>
-                <div class="col-lg-4 col-xs-12 location">
-                    <h4 class="mt-lg-0 mt-sm-4">Location</h4>
-                    <p> Tolhuis, Sint-Pietersvliet 7, 2000 Antwerpen</p>
-                    <p class="mb-0">
-                        <i class="fa fa-phone mr-3"></i>0487 44 80 49</p>
-                    <p><i class="fa fa-envelope-o mr-3"></i>foodiefinds19@gmail.com</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col copyright">
-                    <p><small class="text-white-50">© 2019. All Rights Reserved.</small></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-
+</body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="assets/js/geolocator.js"></script>
 <script src="assets/js/app.js"></script>
-</body>
+
 </html>
