@@ -8,6 +8,12 @@ body{
     display: flex;
 }
 
+@media only screen and (max-width: 620px) {
+    .wrapper img{
+        width: 100%;
+    }
+}
+
 .search-sec{
     padding: 2rem;
 }
