@@ -34,11 +34,16 @@ h4 {
 
 
 .container {
-
     font-size: 18px;
     font-weight: 100;
     margin-top: 20px;
 }
+
+/*.container1{*/
+/*    text-align: justify;*/
+/*}*/
+
+
 .title{
     padding-top: 20px;
     padding-left: 23px;
