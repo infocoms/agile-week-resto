@@ -30,7 +30,6 @@ body {
 /*}*/
 
 header {
-
     background: rgba(21, 47, 79, 0.6);
 }
 h4 {
@@ -50,6 +49,7 @@ h4 {
 }
 #p{
     margin-right:35px ;
+    text-align: justify;
 }
 #pp{
     margin-right: 35px;

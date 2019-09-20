@@ -18,25 +18,9 @@ a {
     width: 100%;
 }
 
-header {
-
-    background: rgba(21, 47, 79, 0.6);
-}
-
 h4 {
     color: beige;
 }
-
-
-.footer {
-    background: rgba(21, 47, 79, 0.6);
-    width: 100%;
-}
-
-body {
-    background-image: url("../../src/rest.jpeg");
-}
-
 
 .location {
     font-style: italic;
