@@ -9,7 +9,14 @@ body{
     display: flex;
 }
 
-@media only screen and (max-width: 620px) {
+.wrapper img{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    background: white;
+}
+
+@media only screen and (max-width: 640px) {
     .wrapper img{
         width: 100%;
     }
