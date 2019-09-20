@@ -1,4 +1,5 @@
 function fetcher() {
+    document.getElementById("run").disabled = true;
     let cityName = document.getElementById("input").value;
     let selected = document.getElementById("select").value;
     fetch("https://developers.zomato.com/api/v2.1/cities?q=" + cityName, {
@@ -12,8 +13,7 @@ function fetcher() {
         let cityID = city.location_suggestions[0].id;
 
         document.getElementById("targetText").innerText = "Showing results for " + city.location_suggestions[0].name;
-        let target = document.getElementById("target");
-        target.innerHTML = "<img src='./src/loading.gif' alt='loading'>";
+
 
         fetch("https://developers.zomato.com/api/v2.1/search?entity_type=city&sort=rating&establishment_type=" + selected + "&entity_id=" + cityID, {
             headers: {
@@ -24,6 +24,7 @@ function fetcher() {
         }).then(function (data) {
             console.log(data);
 
+            let target = document.getElementById("target");
             target.innerHTML = "";
 
             for (i = 0; i < data.restaurants.length; i++) {
@@ -65,8 +66,8 @@ function fetcher() {
                 name.innerText = data.restaurants[i].restaurant.name;
 
                 if (data.restaurants[i].restaurant.photos) {
-                    if (data.restaurants[i].restaurant.photos.length > 8) {
-                        for (let j = 0; j < 8; j++) {
+                    if (data.restaurants[i].restaurant.photos.length > 5) {
+                        for (let j = 0; j < 5; j++) {
                             photos.setAttribute("data-image" + j, data.restaurants[i].restaurant.photos[j].photo.url);
                         }
                     } else {
@@ -109,7 +110,7 @@ function fetcher() {
                         coin4.style.opacity = "0.3";
                 }
 
-                photos.src = photos.getAttribute("data-image" + i);
+                photos.src = photos.getAttribute("data-image" + "1");
                 //photos.style.background = "url('" + photos.getAttribute("data-image" + "1") + "') center center";
                 photos.style.border = "1px solid white";
 
@@ -125,7 +126,7 @@ function fetcher() {
                 let clone = temp.content.cloneNode(true);
                 target.appendChild(clone);
 
-                if (i === 7) {
+                if (i === 4) {
                     break;
                 }
             }
@@ -147,6 +148,8 @@ function fetcher() {
         })
     })
 }
+
+
 
 document.getElementById("run").addEventListener("click", function () {
     fetcher();
