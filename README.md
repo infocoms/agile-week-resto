@@ -3,7 +3,7 @@
 ### Are you trying to find the best restaurant in no time? 
 ### try our page: https://janvdv96.github.io/agile-week-resto/
 
-![](src/fodiefinder.png)
+![](src/fodie.png)
 
 
 ## About 
